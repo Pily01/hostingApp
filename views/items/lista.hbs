@@ -1,0 +1,26 @@
+<h1>ITEMS</h1>
+
+<div class="paquete-wrapper">
+
+  {{#each items}}
+    <div class="paquete-item">
+      <img src="{{this.imgPath}}" alt="paqueteimg">
+      <h2>{{this.name}}</h2>
+      <h3>{{this.tipo}}</h3>
+      <h3>{{this.price}} $</h3>
+      <p>{{this.description}}</p>
+    
+    
+    {{#if ../esPartner}}
+      <a href="/items/eliminar/{{_id}}">Eliminar Item</a>
+      <a href="/items/editar/{{_id}}">Editar Item</a>
+    {{/if}}
+    </div>
+
+  {{/each}}
+
+</div>
+
+{{#if esPartner}}
+  <a href="/items/nuevo-item">Crea un Nuevo Item</a>
+{{/if}}

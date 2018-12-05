@@ -1,0 +1,24 @@
+<h1>EDITA TU ITEM</h1>
+
+<form action="/items/editar/{{_id}}" method="POST">
+  <div class="form-group">
+    <label for="name">Nombre del Item</label>
+    <input name = "name" type="text" class="form-control" id="name" aria-describedby="emailHelp" value="{{name}}">
+  </div>
+  <div class="form-group">
+    <label for="price">Precio</label>
+    <input name = "price" type="text" class="form-control" id="price" aria-describedby="emailHelp" value="{{price}}">
+  </div>
+  <div class="form-group">
+    <label for="tipo">Tipo</label>
+    <input name = "tipo" type="text" class="form-control" id="tipo" aria-describedby="emailHelp" value="{{tipo}}">
+  </div>
+  <div class="form-group">
+    <label for="description">Descripción</label>
+    <textarea name="description" id="description" cols="30" rows="10">{{description}}</textarea>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Editar</button>
+
+  </form>

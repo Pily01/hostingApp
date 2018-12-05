@@ -1,0 +1,28 @@
+<h1>CREA TU ITEM</h1>
+
+<form action="/items/nuevo-item" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="name">Nombre del Item</label>
+    <input name = "name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Nombre del Item">
+  </div>
+  <div class="form-group">
+    <label for="photo">Imagen del Item</label>
+    <input name = "photo" type="file" class="form-control" id="photo" aria-describedby="emailHelp" placeholder="Imagen del Item">
+  </div>
+  <div class="form-group">
+    <label for="price">Precio</label>
+    <input name = "price" type="text" class="form-control" id="price" aria-describedby="emailHelp" placeholder="Precio">
+  </div>
+  <div class="form-group">
+    <label for="tipo">Tipo(Entrada, Plato Fuerte, Postre, Bebida)</label>
+    <input name = "tipo" type="text" class="form-control" id="tipo" aria-describedby="emailHelp" placeholder="Tipo">
+  </div>
+  <div class="form-group">
+    <label for="description">Descripción</label>
+    <textarea name="description" id="description" cols="30" rows="10">Descripción</textarea>
+  </div>
+ 
+ 
+
+  <button type="submit" class="btn btn-primary">Crear Item</button>
+</form>

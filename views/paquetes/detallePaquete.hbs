@@ -1,0 +1,12 @@
+<h1>DETALLES DE PAQUETE</h1>
+<h3>{{paquete.name}}</h3>
+<p>Entrada: {{paquete.entrada}}</p>
+<p>Plato Fuerte: {{paquete.platoFuerte}}</p>
+<p>Postre: {{paquete.postre}}</p>
+<p>Beida: {{paquete.bebida}}</p>
+<p>Número de personas: {{paquete.numPersonas}}</p>
+<p>Precio: {{paquete.price}} $</p>
+{{#if esPartner}}
+  <a href="/paquetes/eliminar/{{_id}}">Eliminar Paquete</a>
+  <a href="/paquetes/editar/{{_id}}">Editar Paquete</a>
+{{/if}}

@@ -1,0 +1,40 @@
+<h1>CREA TU PAQUETE</h1>
+
+<form action="/paquetes/nuevo-paquete" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="name">Nombre del Paquete</label>
+    <input name = "name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Nombre de Paquete">
+  </div>
+  <div class="form-group">
+    <label for="photo">Imagen del Paquete</label>
+    <input name = "photo" type="file" class="form-control" id="photo" aria-describedby="emailHelp" placeholder="Imagen del Paquete">
+  </div>
+  <div class="form-group">
+    <label for="price">Precio</label>
+    <input name = "price" type="text" class="form-control" id="price" aria-describedby="emailHelp" placeholder="Precio">
+  </div>
+  <div class="form-group">
+    <label for="entrada">Entrada</label>
+    <input name = "entrada" type="text" class="form-control" id="entrada" aria-describedby="emailHelp" placeholder="Entrada">
+  </div>
+  <div class="form-group">
+    <label for="platoFuerte">PLato Fuerte</label>
+    <input name = "platoFuerte" type="text" class="form-control" id="platoFuerte" aria-describedby="emailHelp" placeholder="Plato Fuerte">
+  </div>
+  <div class="form-group">
+    <label for="postre">Postre</label>
+    <input name = "postre" type="text" class="form-control" id="postre" aria-describedby="emailHelp" placeholder="Postre">
+  </div>
+  <div class="form-group">
+    <label for="bebida">Bebida</label>
+    <input name = "bebida" type="text" class="form-control" id="bebida" aria-describedby="emailHelp" placeholder="Bebida">
+  </div>
+  <div class="form-group">
+    <label for="numPersonas">Porción en número de personas</label>
+    <input name = "numPersonas" type="number" class="form-control" id="numPersonas" aria-describedby="emailHelp" value="4">
+  </div>
+ 
+ 
+
+  <button type="submit" class="btn btn-primary">Crear Paquete</button>
+</form>
