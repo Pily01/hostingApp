@@ -1,28 +1,47 @@
-<h1>SIGN UP</h1>
+<!-- N A V B A R -->
+<div id="nav">
+ <a href="#">Paquetes</a>
+ <a href="#">Arma tu paquete</a>
+ <img id="logo" src="/images/HostingApp/PRANDIUM.png" heigth="150px" width="150px" alt="logo">
+ <a href="#">Sobre Nosotros</a>
+ <a href="#">Sign Up</a>
+</div>
 
+<!-- S I G N   U P   S E C T I O N-->
 
-<form action="/auth/signup" method="POST">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input name = "email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escribe email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<div class="hero-image2">
+  <div class="hero-text">
+    <h1>SIGN UP</h1>
+      <div>
+        <form action="/auth/signup" method="POST">
+          <fieldset class="uk-fieldset">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input class="uk-input" name = "email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escribe email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputUsername">Username</label>
+              <input class="uk-input" name = "username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp" placeholder="Escribe username">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputRole">Role (Comprador o Partner)</label>
+              <input class="uk-input" name = "role" type="text" class="form-control" id="exampleInputRole" aria-describedby="emailHelp" placeholder="Escribe role">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Contraseña</label>
+              <input class="uk-input" name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword2">Confirma Contraseña</label>
+              <input class="uk-input" name="password2" type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña">
+            </div>
+            <br/>
+           
+            <button type="submit" class="btn btn-primary">SIGN UP</button>
+            </fieldset>
+          
+        </form>
+      </div>
+     
   </div>
-  <div class="form-group">
-    <label for="exampleInputUsername">Username</label>
-    <input name = "username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp" placeholder="Escribe username">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputRole">Role (Comprador o Partner)</label>
-    <input name = "role" type="text" class="form-control" id="exampleInputRole" aria-describedby="emailHelp" placeholder="Escribe role">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Contraseña</label>
-    <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword2">Confirma Contraseña</label>
-    <input name="password2" type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña">
-  </div>
- 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</div>

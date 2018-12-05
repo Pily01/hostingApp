@@ -1,16 +1,16 @@
 <!-- N A V B A R -->
 <div id="nav">
- <a href="#">Ordena Ahora</a>
- <a href="#">Promociones</a>
+ <a href="#">Paquetes</a>
+ <a href="#">Arma tu paquete</a>
  <img id="logo" src="/images/HostingApp/PRANDIUM.png" heigth="150px" width="150px" alt="logo">
- <a href="#">About</a>
+ <a href="#">Sobre Nosotros</a>
  <a href="#">Sign Up</a>
 </div>
 <!-- M A I N   I M A G E -->
 <div class="hero-image"> 
   <div class="hero-text">
     <h1>TU CENA ESTÁ LISTA</h1>
-    <button class="btn">Comienza Aquí</button>
+    <a href="/auth/login"><button class="btn">COMIENZA AQUÍ</button></a>
   </div>
 </div>
 
@@ -19,26 +19,81 @@
 
 <div id="info" class="uk-child-width-1-2@s uk-grid-match" uk-grid>
     <div>
-      <div class="uk-card uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Hover</h3>
+      <div class="uk-card uk-card-hover uk-card-large uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+          <h3 class="uk-card-title">ENTREGAS A TIEMPO</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <div class="img-container">
+            <img class="icon" src="/images/HostingApp/clock.png" alt="clock">
+          </div>
       </div>
     </div>
+
     <div>
-      <div class="uk-card uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Hover</h3>
+      <div class="uk-card uk-card-hover uk-card-large uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+          <h3 class="uk-card-title">VARIEDAD DE RESTAURANTES</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <div class="img-container">
+            <img class="icon" src="/images/HostingApp/restaurant.png" alt="restaurant">
+          </div>
       </div>
     </div>
+
     <div>
-      <div class="uk-card uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Hover</h3>
+      <div class="uk-card uk-card-hover uk-card-large uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+          <h3 class="uk-card-title">PARA CUALQUIER OCASIÓN</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <div class="img-container">
+            <img class="icon" src="/images/HostingApp/drink.png" alt="drink">
+          </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="uk-card uk-card-hover uk-card-large uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+          <h3 class="uk-card-title">VARIEDAD DE PAQUETES</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <div class="img-container">
+            <img class="icon" src="/images/HostingApp/food.png" alt="food">
+          </div>
       </div>
     </div>
 </div>
 
 <!-- C A R O U S E L -->
 
+<div uk-slideshow="animation: pull">
+
+    <div class="uk-position-relative uk-visible-toggle uk-light">
+
+        <ul class="uk-slideshow-items">
+            <li>
+                <img src="/images/HostingApp/Harma tu cena.png" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="/images/HostingApp/SERVICIO A DOMICILIO.png" alt="" uk-cover>
+            </li>
+            <li>
+                <img src="/images/HostingApp/ocasiones especiales.png" alt="" uk-cover>
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+    </div>
+
+    <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+</div>
 
 <!-- F O O T E R -->
+
+<nav id="footer" class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href=""></a>CONTACTO</li>
+            <li class="uk-active"><a href=""></a>PRANDIUM</li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
+</nav>

@@ -1,18 +1,46 @@
-<h1>PAQUETES</h1>
-
-<div class="paquete-wrapper">
-
-  {{#each paquetes}}
-    <div class="paquete-item">
-      <img src="{{this.imgPath}}" alt="paqueteimg">
-      <h2>{{this.name}}</h2>
-      <h3>{{this.price}} $</h3>
-      <a href="/paquetes/detallePaquete/{{this._id}}">Detalles</a>
-    </div>
-  {{/each}}
-
+<!-- N A V B A R -->
+<div id="nav">
+ <a href="#">Paquetes</a>
+ <a href="#">Arma tu paquete</a>
+ <img id="logo" src="/images/HostingApp/PRANDIUM.png" heigth="150px" width="150px" alt="logo">
+ <a href="#">Sobre Nosotros</a>
+ <a href="#">Sign Up</a>
 </div>
 
-{{#if esPartner}}
-  <a href="/paquetes/nuevo-paquete">Crea un Nuevo Paquete</a>
-{{/if}}
+<!--D I S P L A Y   P A Q U E T E S-->
+
+<h1>PAQUETES</h1>
+
+<div id="paquetes-background">
+  <div id="paquetes-wrapper">
+  
+    {{#each paquetes}}
+  
+      <div class="paqueteCard uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-animation-slide-left" uk-grid>
+        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+            <img src={{this.imgPath}} alt="imagenPaquete">
+        </div>
+        <div>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">{{this.name}}</h3>
+                <div class="price-div">
+                  <p>{{this.price}} $</p>
+                </div>
+                <a href="/paquetes/detallePaquete/{{this._id}}">Detalles</a>
+            </div>
+        </div>
+      </div>
+  
+    {{/each}}
+  
+  
+  {{#if esPartner}}
+    <a href="/paquetes/nuevo-paquete">Crea un Nuevo Paquete</a>
+  {{/if}}
+  
+  </div>
+</div>
+
+
+
+
