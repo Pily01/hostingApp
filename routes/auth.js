@@ -1,3 +1,5 @@
+
+
 const express = require('express');
 const router = express.Router();
 const passport = require("../helpers/passport")
@@ -5,7 +7,6 @@ const User = require("../models/User")
 const Partner = require("../models/Partner")
 
 
-/* GET home page. */
 
 ////////////////////////////////////////////
 ////°°-------- S I G N   U P ---------°°////
@@ -43,28 +44,6 @@ router.post("/login", passport.authenticate('local', { failureRedirect: '/auth/l
   res.redirect("/paquetes/lista")
 })
 
-
-module.exports = router;
-
-
-
-////////////////////////////////////////////
-////°°-------- S I G N   U P ---------°°////
-////°°----- R E S T A U R A N T ------°°////
-////////////////////////////////////////////
-
-//router.get("/signup/partner", (req,res,next)=> {
-//  res.render("auth/signup-partner")
-//})
-//
-//router.post("/signup/partner",(req,res,next) => {
-//  Partner.register(req.body,req.body.password)
-//  .then(partner => {
-//    res.json(partner)
-//    //res.send("¡ BIENVENIDO !")
-//  }).catch(e =>                                                                                                                                                             
-//    res.send(e))
-//})
 
 
 
