@@ -51,19 +51,18 @@
 {{#if esPartner}}
 <div class="button-container">
 
-  <button class="btn centrado">
-    <a class="button-text2" href="/paquetes/eliminar/{{paquete._id}}">Eliminar Paquete</a>
-  </button>
-  <button class="btn">
-    <a class="button-text2" href="/paquetes/editar/{{paquete._id}}">Editar Paquete</a>
-  </button>
+    <a class="button-text2" href="/paquetes/eliminar/{{paquete._id}}"> <button class="btn centrado">Eliminar Paquete </button></a>
+ 
+ 
+    <a class="button-text2" href="/paquetes/editar/{{paquete._id}}"> <button class="btn">Editar Paquete</button></a>
+  
 
 </div>
 {{else}}
   <div class="button-container">
-    <button class="btn centrado">
-      <a class="button-text2" href="/paquetes/agregado/{{paquete._id}}">Agregar al Carrito</a>
-    </button>
+    
+      <a class="button-text2" href="/paquetes/agregado/{{paquete._id}}"><button class="btn centrado">Agregar al Carrito</button></a>
+    
   </div>
 
 
