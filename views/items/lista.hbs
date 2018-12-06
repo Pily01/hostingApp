@@ -1,26 +1,52 @@
-<h1>ITEMS</h1>
-
-<div class="paquete-wrapper">
-
-  {{#each items}}
-    <div class="paquete-item">
-      <img src="{{this.imgPath}}" alt="paqueteimg">
-      <h2>{{this.name}}</h2>
-      <h3>{{this.tipo}}</h3>
-      <h3>{{this.price}} $</h3>
-      <p>{{this.description}}</p>
-    
-    
-    {{#if ../esPartner}}
-      <a href="/items/eliminar/{{_id}}">Eliminar Item</a>
-      <a href="/items/editar/{{_id}}">Editar Item</a>
-    {{/if}}
-    </div>
-
-  {{/each}}
-
+<!-- N A V B A R -->
+<div id="nav">
+ <a href="#">Paquetes</a>
+ <a href="#">Arma tu paquete</a>
+ <img id="logo" src="/images/HostingApp/PRANDIUM.png" heigth="150px" width="150px" alt="logo">
+ <a href="#">Sobre Nosotros</a>
+ <a href="#">Sign Up</a>
 </div>
 
-{{#if esPartner}}
-  <a href="/items/nuevo-item">Crea un Nuevo Item</a>
-{{/if}}
+<!-- I T E M S -->
+
+<h1 class="titulo">ITEMS</h1>
+
+<div id="paquetes-background">
+  <div id="paquetes-wrapper">
+
+
+    {{#each items}}
+        <div class="paqueteCard uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-animation-slide-left" uk-grid>
+                <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                    <img class="card-image" src={{this.imgPath}} alt="imagenPaquete">
+                </div>
+                <div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">{{this.name}}</h3>
+                        <p>{{this.tipo}}</p>
+                        <p>{{this.description}}</p>
+                        <div class="price-div">
+                          <p>{{this.price}} $</p>
+                        </div>
+        
+                        {{#if ../esPartner}}
+                          <a class="button-text2" href="/items/eliminar/{{_id}}"><button class="btn">Eliminar Item</button></a>
+                          <a class="button-text2" href="/items/editar/{{_id}}"><button class="btn">Editar Item</button></a>
+                        {{/if}}
+                        
+                     </div>
+                </div>
+        </div>
+    
+    {{/each}}
+    
+    
+    {{#if esPartner}}
+      <div class="button-container">
+        <a class="button-text2" href="/items/nuevo-item"><button class="btn">Crea un Nuevo Item</button></a>
+      </div>
+    {{/if}}
+  </div>
+</div>
+
+

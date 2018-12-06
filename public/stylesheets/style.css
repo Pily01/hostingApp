@@ -139,6 +139,12 @@ a {
   text-align: center;
   margin-top: 17%; }
 
+#paquetes-wrapper p {
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+  font-size: 1.5em;
+  margin-left: 10%; }
+
 .paqueteCard {
   background-image: url("/images/HostingApp/cardcover.png");
   background-size: 51% 100%;
@@ -159,7 +165,7 @@ a {
   color: white;
   font-size: 1.7em; }
 
-#titulo {
+.titulo {
   text-align: center;
   font-family: 'Fjalla One', sans-serif;
   font-size: 5.5em; }

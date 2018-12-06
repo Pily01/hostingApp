@@ -9,40 +9,49 @@
 
 
 <!-- F O R M -->
-<h1>EDITA TU PAQUETE</h1>
+<div class="hero-image"> 
+  <div class="hero-text">
+    <h1>EDITA TU PAQUETE</h1>
+    
+    <form action="/paquetes/editar/{{_id}}" method="POST">
+      <fieldset class="uk-fieldset">
 
-<form action="/paquetes/editar/{{_id}}" method="POST">
-  <div class="form-group">
-    <label for="name">Nombre del Paquete</label>
-    <input name = "name" type="text" class="form-control" id="" aria-describedby="emailHelp" value="{{name}}">
-  </div>
-  <div class="form-group">
-    <label for="price">Precio</label>
-    <input name = "price" type="text" class="form-control" id="price" aria-describedby="emailHelp" value="{{price}}">
-  </div>
-  <div class="form-group">
-    <label for="entrada">Entrada</label>
-    <input name = "entrada" type="text" class="form-control" id="entrada" aria-describedby="emailHelp" value="{{entrada}}">
-  </div>
-  <div class="form-group">
-    <label for="platoFuerte">PLato Fuerte</label>
-    <input name = "platoFuerte" type="text" class="form-control" id="platoFuerte" aria-describedby="emailHelp" value="{{platoFuerte}}">
-  </div>
-  <div class="form-group">
-    <label for="postre">Postre</label>
-    <input name = "postre" type="text" class="form-control" id="postre" aria-describedby="emailHelp" value="{{postre}}">
-  </div>
-  <div class="form-group">
-    <label for="bebida">Bebida</label>
-    <input name = "bebida" type="text" class="form-control" id="bebida" aria-describedby="emailHelp" value="{{bebida}}">
-  </div>
-  <div class="form-group">
-    <label for="numPersonas">Porción en número de personas</label>
-    <input name = "numPersonas" type="number" class="form-control" id="numPersonas" aria-describedby="emailHelp" value="{{numPersonas}}">
-  </div>
- 
- 
+        <div class="uk-margin">
+          <label for="name">Nombre del Paquete</label>
+          <input class="uk-input" name = "name" type="text" class="form-control" id="" aria-describedby="emailHelp" value="{{name}}">
+        </div>
+        <div class="uk-margin">
+          <label for="price">Precio</label>
+          <input class="uk-input" name = "price" type="text" class="form-control" id="price" aria-describedby="emailHelp" value="{{price}}">
+        </div>
+        <div class="uk-margin">
+          <label for="entrada">Entrada</label>
+          <input class="uk-input" name = "entrada" type="text" class="form-control" id="entrada" aria-describedby="emailHelp" value="{{entrada}}">
+        </div>
+        <div class="uk-margin">
+          <label for="platoFuerte">PLato Fuerte</label>
+          <input class="uk-input" name = "platoFuerte" type="text" class="form-control" id="platoFuerte" aria-describedby="emailHelp" value="{{platoFuerte}}">
+        </div>
+        <div class="uk-margin">
+          <label for="postre">Postre</label>
+          <input class="uk-input" name = "postre" type="text" class="form-control" id="postre" aria-describedby="emailHelp" value="{{postre}}">
+        </div>
+        <div class="uk-margin">
+          <label for="bebida">Bebida</label>
+          <input class="uk-input" name = "bebida" type="text" class="form-control" id="bebida" aria-describedby="emailHelp" value="{{bebida}}">
+        </div>
+        <div class="uk-margin">
+          <label for="numPersonas">Porción en número de personas</label>
+          <input class="uk-input" name = "numPersonas" type="number" class="form-control" id="numPersonas" aria-describedby="emailHelp" value="{{numPersonas}}">
+        </div>
+       
+      
+        <button type="submit" class="btn btn-primary">Editar</button>
 
-  <button type="submit" class="btn btn-primary">Editar</button>
+      </fieldset>
+    
+    </form>
+  </div>
+</div>
 
-  </form>
+  
