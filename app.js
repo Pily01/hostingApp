@@ -13,7 +13,7 @@ const passport       = require("passport")
 
 
 mongoose
-      .connect('mongodb://Pily01:pily01@ds023463.mlab.com:23463/hostingapp', {useNewUrlParser: true})
+      .connect(process.env.DB, {useNewUrlParser: true})
       .then(x => {
         console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
       })
