@@ -1,12 +1,63 @@
-<h1>DETALLES DE PAQUETE</h1>
-<h3>{{paquete.name}}</h3>
-<p>Entrada: {{paquete.entrada}}</p>
-<p>Plato Fuerte: {{paquete.platoFuerte}}</p>
-<p>Postre: {{paquete.postre}}</p>
-<p>Beida: {{paquete.bebida}}</p>
-<p>Número de personas: {{paquete.numPersonas}}</p>
-<p>Precio: {{paquete.price}} $</p>
+<!-- N A V B A R -->
+<div id="nav">
+ <a href="#">Paquetes</a>
+ <a href="#">Arma tu paquete</a>
+ <img id="logo" src="/images/HostingApp/PRANDIUM.png" heigth="150px" width="150px" alt="logo">
+ <a href="#">Sobre Nosotros</a>
+ <a href="#">Sign Up</a>
+</div>
+
+<!-- D E T A L L E   P A Q U E T E -->
+
+<div class="hero-image3"> 
+  <div class="hero-text">
+    <h1>DETALLES DEL PAQUETE</h1>
+  </div>
+</div>
+
+
+<div class="detalles-section uk-section uk-section-muted">
+    <div class="uk-container">
+
+        <h1>{{paquete.name}}</h1>
+
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            <div>
+                <p><b>Entrada: </b> {{paquete.entrada}}</p>
+            </div>
+            <div>
+                <p><b>Plato Fuerte: </b>{{paquete.platoFuerte}}</p>
+            </div>
+            <div>
+               <p><b>Postre: </b>{{paquete.postre}}</p>
+            </div>
+            <div>
+               <p><b>Beida: </b>{{paquete.bebida}}</p>
+            </div>
+            <div>
+               <p><b>Número de personas: </b>{{paquete.numPersonas}}</p>
+            </div>
+            <div>
+               <p><b>Precio: </b>{{paquete.price}} $</p>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+
+
 {{#if esPartner}}
-  <a href="/paquetes/eliminar/{{_id}}">Eliminar Paquete</a>
-  <a href="/paquetes/editar/{{_id}}">Editar Paquete</a>
+<div class="button-container">
+
+  <button class="btn centrado">
+    <a class="button-text2" href="/paquetes/eliminar/{{paquete._id}}">Eliminar Paquete</a>
+  </button>
+  <button class="btn">
+    <a class="button-text2" href="/paquetes/editar/{{paquete._id}}">Editar Paquete</a>
+  </button>
+
+</div>
+
 {{/if}}

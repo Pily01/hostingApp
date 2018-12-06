@@ -9,7 +9,7 @@
 
 <!--D I S P L A Y   P A Q U E T E S-->
 
-<h1>PAQUETES</h1>
+<h1 id="titulo">PAQUETES</h1>
 
 <div id="paquetes-background">
   <div id="paquetes-wrapper">
@@ -18,7 +18,7 @@
   
       <div class="paqueteCard uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-animation-slide-left" uk-grid>
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-            <img src={{this.imgPath}} alt="imagenPaquete">
+            <img class="card-image" src={{this.imgPath}} alt="imagenPaquete">
         </div>
         <div>
             <div class="uk-card-body">
@@ -26,7 +26,8 @@
                 <div class="price-div">
                   <p>{{this.price}} $</p>
                 </div>
-                <a href="/paquetes/detallePaquete/{{this._id}}">Detalles</a>
+                <button class="btn detalles"><a class="button-text" href="/paquetes/detallePaquete/{{this._id}}">Detalles</a></button>
+                
             </div>
         </div>
       </div>
@@ -35,7 +36,15 @@
   
   
   {{#if esPartner}}
-    <a href="/paquetes/nuevo-paquete">Crea un Nuevo Paquete</a>
+
+  <div class="button-container">
+   
+      <a class="button-text2" href="/paquetes/nuevo-paquete"><button class="btn">Crea un Nuevo Paquete</button></a>
+    
+  </div>
+
+  
+   
   {{/if}}
   
   </div>
