@@ -11,6 +11,10 @@ const paqueteSchema = new Schema({
   numPersonas: Number,
   imgName: String,
   imgPath: String,
+  enCarrito:{
+    type: Boolean,
+    default: false,
+  }
 
 },{
   timestamps: {

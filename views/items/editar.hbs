@@ -1,24 +1,45 @@
-<h1>EDITA TU ITEM</h1>
+<!-- N A V B A R -->
 
-<form action="/items/editar/{{_id}}" method="POST">
-  <div class="form-group">
-    <label for="name">Nombre del Item</label>
-    <input name = "name" type="text" class="form-control" id="name" aria-describedby="emailHelp" value="{{name}}">
-  </div>
-  <div class="form-group">
-    <label for="price">Precio</label>
-    <input name = "price" type="text" class="form-control" id="price" aria-describedby="emailHelp" value="{{price}}">
-  </div>
-  <div class="form-group">
-    <label for="tipo">Tipo</label>
-    <input name = "tipo" type="text" class="form-control" id="tipo" aria-describedby="emailHelp" value="{{tipo}}">
-  </div>
-  <div class="form-group">
-    <label for="description">Descripción</label>
-    <textarea name="description" id="description" cols="30" rows="10">{{description}}</textarea>
-  </div>
+<div id="nav">
+ <a href="/paquetes/lista">Paquetes</a>
+ <a href="/items/lista">Arma tu paquete</a>
+ <img id="logo" src="/images/HostingApp/PRANDIUM.png" heigth="150px" width="150px" alt="logo">
+ <a href="#">Sobre Nosotros</a>
+ <a href="/paquetes/carrito">Carrito</a>
+</div>
 
 
-  <button type="submit" class="btn btn-primary">Editar</button>
+<!-- F O R M -->
 
-  </form>
+<div class="hero-image4"> 
+  <div class="hero-text">
+    <h1>EDITA TU ITEM</h1>
+
+    <form action="/items/editar/{{_id}}" method="POST">
+      <fieldset class="uk-fieldset">
+
+         <div class="uk-margin">
+           <label for="name">Nombre del Item</label>
+           <input class="uk-input" name = "name" type="text" class="form-control" id="name" aria-describedby="emailHelp" value="{{name}}">
+         </div>
+         <div class="uk-margin">
+           <label for="price">Precio</label>
+           <input class="uk-input" name = "price" type="text" class="form-control" id="price" aria-describedby="emailHelp" value="{{price}}">
+         </div>
+         <div class="uk-margin">
+           <label for="tipo">Tipo</label>
+           <input class="uk-input" name = "tipo" type="text" class="form-control" id="tipo" aria-describedby="emailHelp" value="{{tipo}}">
+         </div>
+         <div class="uk-margin">
+           <label for="description">Descripción</label>
+           <textarea class="uk-input" name="description" id="description" cols="30" rows="10">{{description}}</textarea>
+         </div>
+       
+       
+         <button type="submit" class="btn btn-primary">Editar</button>
+
+      </fieldset>
+    </form>
+
+  </div>
+</div>

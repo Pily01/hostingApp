@@ -1,0 +1,52 @@
+<!-- N A V B A R -->
+<div id="nav">
+ <a href="/paquetes/lista">Paquetes</a>
+ <a href="/items/lista">Arma tu paquete</a>
+ <img id="logo" src="/images/HostingApp/PRANDIUM.png" heigth="150px" width="150px" alt="logo">
+ <a href="#">Sobre Nosotros</a>
+ <a href="/paquetes/carrito">Carrito</a>
+</div>
+
+<!--D I S P L A Y   P A Q U E T E S-->
+
+<h1 class="titulo">CARRITO</h1>
+
+<div id="paquetes-background">
+  <div id="paquetes-wrapper">
+    
+    {{#each r}}
+
+
+      <div class="uk-child-width-1-2@m" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-media-top">
+                    <img src="{{this.imgPath}}" alt="paqueteImage">
+                </div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title black">{{this.name}}</h3>
+                    <p class="black">{{this.price}} $</p>
+                    <button class="btn detalles"><a class="button-text" href="/paquetes/detallePaquete/{{this._id}}">Detalles</a></button>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    {{/each}}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

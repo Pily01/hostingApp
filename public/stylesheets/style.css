@@ -49,6 +49,14 @@ a {
   background-size: cover;
   position: relative; }
 
+.hero-image4 {
+  background-image: url("/images/HostingApp/editaitem.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
 .hero-text {
   text-shadow: 4px 4px #696969;
   color: white;
@@ -210,5 +218,24 @@ a {
 
 .fletsed {
   margin: 10px !important; }
+
+.btn2 {
+  background-color: #fbbd59;
+  color: white;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 2px;
+  font-size: 25px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+  margin-left: 15px; }
+
+.btn2:hover {
+  background-color: #8B4513; }
+
+.black {
+  color: black !important; }
 
 /*# sourceMappingURL=style.css.map */

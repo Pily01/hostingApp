@@ -75,7 +75,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
+app.locals.products = []
 // D E F A U L T   V A L U E S   R O U T E S
 
 const auth = require("./routes/auth")

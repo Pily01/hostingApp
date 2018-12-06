@@ -1,10 +1,11 @@
 <!-- N A V B A R -->
+
 <div id="nav">
- <a href="#">Paquetes</a>
- <a href="#">Arma tu paquete</a>
+ <a href="/paquetes/lista">Paquetes</a>
+ <a href="/items/lista">Arma tu paquete</a>
  <img id="logo" src="/images/HostingApp/PRANDIUM.png" heigth="150px" width="150px" alt="logo">
  <a href="#">Sobre Nosotros</a>
- <a href="#">Sign Up</a>
+ <a href="#">Carrito</a>
 </div>
 
 <!-- I T E M S -->
@@ -32,7 +33,10 @@
                         {{#if ../esPartner}}
                           <a class="button-text2" href="/items/eliminar/{{_id}}"><button class="btn">Eliminar Item</button></a>
                           <a class="button-text2" href="/items/editar/{{_id}}"><button class="btn">Editar Item</button></a>
+                          {{else}}
+                            <a class="button-text2" href="#"><button class="btn2">Agregar al carrito</button></a>
                         {{/if}}
+
                         
                      </div>
                 </div>
