@@ -1,3 +1,6 @@
+<!--/////////////////////////////////////////////////////////////////////--->
+<!--//////////////////////  C A R R I T O  ////////////////////////////////--->
+<!--/////////////////////////////////////////////////////////////////////--->
 
 
 <!--D I S P L A Y   P A Q U E T E S-->
@@ -10,7 +13,7 @@
     {{#each arr}}
 
 
-      <div class="uk-child-width-1-2@m" uk-grid>
+      <div class="center uk-child-width-1-2@m" uk-grid>
         <div>
             <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
@@ -19,7 +22,8 @@
                 <div class="uk-card-body">
                     <h3 class="uk-card-title black">{{this.name}}</h3>
                     <p class="black">{{this.price}} $</p>
-                    <button class="btn detalles"><a class="button-text" href="/paquetes/detallePaquete/{{this._id}}">Detalles</a></button>
+                    <a class="button-text" href="/paquetes/detallePaquete/{{this._id}}"><button class="btn detalles">Detalles</button></a>
+                    <a class="button-text" href="/eliminar/{{this._id}}"><button class="btn detalles">Eliminar</button></a>
                 </div>
             </div>
         </div>

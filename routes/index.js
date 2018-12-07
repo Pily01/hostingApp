@@ -31,6 +31,14 @@ router.get("/item/agregado/:id", (req, res, next) => {
   res.redirect('/items/lista')
 })
 
+router.get("/eliminar/:id", (req, res, next) => {
+  const {id} = req.params
+  const index = req.app.locals.items.indexOf(id)
+  console.log(id)
+  req.app.locals.items.splice(index,1)
+  res.redirect('/carrito')
+})
+
 
 
 router.get("/carrito",(req, res, next)=>{
