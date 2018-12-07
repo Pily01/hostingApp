@@ -1,3 +1,8 @@
+//////////////////////////////////////////////////////
+////°°-------- I N D E X   R O U T E S ---------°°////
+//////////////////////////////////////////////////////
+
+
 var express = require('express');
 var router = express.Router();
 const Paquete = require('../models/Paquete');
@@ -31,15 +36,6 @@ router.get("/item/agregado/:id", (req, res, next) => {
   res.redirect('/items/lista')
 })
 
-router.get("/eliminar/:id", (req, res, next) => {
-  const {id} = req.params
-  const index = req.app.locals.items.indexOf(id)
-  console.log(id)
-  req.app.locals.items.splice(index,1)
-  res.redirect('/carrito')
-})
-
-
 
 router.get("/carrito",(req, res, next)=>{
  const {products} = req.app.locals
@@ -62,6 +58,39 @@ router.get("/carrito",(req, res, next)=>{
     .catch(err => console.log(err))
   }).catch(e=>{console.log(e)})
 })
+
+
+////////////////////////////////////////////
+////°°-------- E L I M I N A R ---------°°////
+////°°-------- P A Q U E T E S--------°°////
+////°°--------  Y  I T E M S  --------°°////
+////°°-------- D E L   C A R R O--------°°////
+////////////////////////////////////////////
+
+router.get("/eliminar/:id", (req, res, next) => {
+  const {id} = req.params
+  const index = req.app.locals.items.indexOf(id)
+  console.log(id)
+  req.app.locals.items.splice(index,1)
+  res.redirect('/carrito')
+})
+
+//////////////////////////////////////////////
+////°°-------- C H E C K O U T ---------°°////
+//////////////////////////////////////////////
+
+router.get("/checkout", (req, res, next) => {
+  res.render("checkout")
+})
+
+//////////////////////////////////////////////
+////°°-------- N O S O T R O S ---------°°////
+//////////////////////////////////////////////
+
+router.get("/nosotros", (req, res, next) => {
+  res.render("nosotros")
+})
+
 
 
 module.exports = router;

@@ -1,3 +1,6 @@
+////////////////////////////////////////////////////
+////°°-------- A U T H   R O U T E S ---------°°////
+////////////////////////////////////////////////////
 
 
 const express = require('express');
@@ -5,6 +8,8 @@ const router = express.Router();
 const passport = require("../helpers/passport")
 const User = require("../models/User")
 const Partner = require("../models/Partner")
+
+
 
 
 

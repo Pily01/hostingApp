@@ -12,6 +12,8 @@ const mongoose       = require("mongoose")
 const passport       = require("passport")
 
 
+// M O N G O O S E
+
 mongoose
       .connect(process.env.DB, {useNewUrlParser: true})
       .then(x => {
@@ -23,13 +25,18 @@ mongoose
 
 var app = express();
 
-//M I D D L E   W A R E   S E T U P
+
+
+// M I D D L E   W A R E   S E T U P
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-// V I E W   E N G I N E   S E T U P
+
+//  V I E W   E N G I N E   S E T U P
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
@@ -48,12 +55,10 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// 4 0 4   E R R O R
-//app.use(function(req, res, next) {
-  //next(createError(404));
-//});
+
 
 // P A S P O R T   
+
 app.use(require("express-session")({
   secret: "My name is Joana",
   resave: false,
@@ -64,7 +69,10 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
+
+
 // E R R O R   H A N D L E R
+
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
@@ -75,8 +83,16 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
+
+
+// D E T A L L E S   P R O D U C T O S
+
 app.locals.products = []
 app.locals.items = []
+
+
+
 // D E F A U L T   V A L U E S   R O U T E S
 
 const auth = require("./routes/auth")
