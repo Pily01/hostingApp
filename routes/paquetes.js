@@ -131,30 +131,30 @@ module.exports = router;
 ////°°-------- A L   C A R R O--------°°////
 ////////////////////////////////////////////
 
-router.get("/agregado/:id", (req, res, next) => {
-  const {id} = req.params
-  Paquete.findByIdAndUpdate(id, {enCarrito: true})
-  .then(paquete => {
-
-    //res.render("/paquetes/agregado")
-    req.app.locals.products.push(id)
-    res.redirect('/paquetes/carrito')
-    console.log(paquete)
-  }).catch(e => {
-    console.log(e)
-  })
-})
-
-
-
-router.get("/carrito",(req, res, next)=>{
- const {products} = req.app.locals
- //const products = ['5c096bae126cdc58e7bfccf1', '5c07251bb89bd75b78f37f6a']
- Paquete.find( { _id: { $in: products } } )
-  .then(r=>{
-    res.render("paquetes/carrito", {r})
-    //res.send(r)
-    console.log(r)
-
-  }).catch(e=>{console.log(e)})
-})
+//router.get("/agregado/:id", (req, res, next) => {
+//  const {id} = req.params
+//  Paquete.findByIdAndUpdate(id, {enCarrito: true})
+//  .then(paquete => {
+//
+//    //res.render("/paquetes/agregado")
+//    req.app.locals.products.push(id)
+//    res.redirect('/paquetes/carrito')
+//    console.log(paquete)
+//  }).catch(e => {
+//    console.log(e)
+//  })
+//})
+//
+//
+//
+//router.get("/carrito",(req, res, next)=>{
+// const {products} = req.app.locals
+// //const products = ['5c096bae126cdc58e7bfccf1', '5c07251bb89bd75b78f37f6a']
+// Paquete.find( { _id: { $in: products } } )
+//  .then(r=>{
+//    res.render("paquetes/carrito", {r})
+//    //res.send(r)
+//    console.log(r)
+//
+//  }).catch(e=>{console.log(e)})
+//})

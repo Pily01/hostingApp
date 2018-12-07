@@ -76,6 +76,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.locals.products = []
+app.locals.items = []
 // D E F A U L T   V A L U E S   R O U T E S
 
 const auth = require("./routes/auth")
